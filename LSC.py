@@ -16,7 +16,7 @@ for i in range(0,len(K)):
     train_x.extend(list(Train_x[Train_y == K[i],:]))
 train_x = np.array(train_x)
 # 这里数据是非常有顺序的，或许这里可以考虑一下打乱顺序
-L = np.arange(0,m,1)
+L = np.arange(0,train_x.shape[0],1)
 random.shuffle(L)
 L = tuple(L)
 # 结果发现打乱了顺序对结果也没有什么影响，这个模型本身就不受顺序影响^V^
