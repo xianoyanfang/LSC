@@ -1,6 +1,7 @@
 # 这里要先运行 ' get_MNIST.py '文件获取Train_x,Train_y,Test_x,Test_y
-# 才能进行下一步的操作
+# 才能进行下一步的操作，然后在运行LSC.py文件
 #筛选出0,1数据
+import random
 K = [0,1,2,3,4,5,6,7,8,9]
 m,n = Train_x.shape
 train_y = []
