@@ -13,7 +13,7 @@ import struct
 import numpy as np
 import os
 
-os.chdir(r"C:\Users\xiao\.spyder-py3\机器学习")
+os.chdir(r"C:\Users\xiao\.spyder-py3\机器学习") #加入有mnist数据的路径
 
 # 解析函数，将mnist数据集解析为我们需要的数据
 # eg: filrname = 'train-images-idx3-ubyte'
