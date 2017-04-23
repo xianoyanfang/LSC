@@ -17,7 +17,7 @@ os.chdir(r"C:\Users\xiao\.spyder-py3\机器学习") #加入有mnist数据的路�
 
 # 解析函数，将mnist数据集解析为我们需要的数据
 # eg: filrname = 'train-images-idx3-ubyte'
-#     train_X = Analytic_fun(filename)
+#     train_X = loadImageSet(filename)
     
 # 下面两个函数是我在网上找到的，http://blog.csdn.net/qq_32166627/article/details/62218072    
 def loadImageSet(filename):  
