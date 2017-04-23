@@ -1,22 +1,25 @@
-# ÕâÀïÒªÏÈÔËĞĞ ' get_MNIST.py 'ÎÄ¼ş»ñÈ¡Train_x,Train_y,Test_x,Test_y
-# ²ÅÄÜ½øĞĞÏÂÒ»²½µÄ²Ù×÷
-#É¸Ñ¡³ö0,1Êı¾İ
+# è¿™é‡Œè¦å…ˆè¿è¡Œ ' get_MNIST.py 'æ–‡ä»¶è·å–Train_x,Train_y,Test_x,Test_y
+# æ‰èƒ½è¿›è¡Œä¸‹ä¸€æ­¥çš„æ“ä½œ
+#ç­›é€‰å‡º0,1æ•°æ®
 K = [0,1,2,3,4,5,6,7,8,9]
 m,n = Train_x.shape
 train_y = []
-# ½«KÖĞµÄÊı¾İÌôÑ¡³öÀ´
+# å°†Kä¸­çš„æ•°æ®æŒ‘é€‰å‡ºæ¥
 for i in range(0,len(K)):
     train_y.extend(Train_y[Train_y == K[i]])
 train_y = np.array(train_y)
-# ½øĞĞ¾ØÕó»¯
+# è¿›è¡ŒçŸ©é˜µåŒ–
 train_y = OFK(train_y,K)
 train_x = []
 for i in range(0,len(K)):
     train_x.extend(list(Train_x[Train_y == K[i],:]))
 train_x = np.array(train_x)
-# ÕâÀïÊı¾İÊÇ·Ç³£ÓĞË³ĞòµÄ£¬»òĞíÕâÀï¿ÉÒÔ¿¼ÂÇÒ»ÏÂ´òÂÒË³Ğò
-
-W = train_lsc(train_x,train_y)
+# è¿™é‡Œæ•°æ®æ˜¯éå¸¸æœ‰é¡ºåºçš„ï¼Œæˆ–è®¸è¿™é‡Œå¯ä»¥è€ƒè™‘ä¸€ä¸‹æ‰“ä¹±é¡ºåº
+L = np.arange(0,m,1)
+random.shuffle(L)
+L = tuple(L)
+# ç»“æœå‘ç°æ‰“ä¹±äº†é¡ºåºå¯¹ç»“æœä¹Ÿæ²¡æœ‰ä»€ä¹ˆå½±å“ï¼Œè¿™ä¸ªæ¨¡å‹æœ¬èº«å°±ä¸å—é¡ºåºå½±å“^V^
+W = train_lsc(train_x[L[0:len(L)],:],train_y[L[0:len(L)],:])
 
 m,n = Test_x.shape
 test_y = []
