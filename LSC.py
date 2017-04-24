@@ -36,4 +36,4 @@ pre_Y = test_lsc(test_x,W)
 pre_Y = one_of_kind(pre_Y,K)
 
 accuary = 1-sum(sum(abs(pre_Y - test_y)))/m
-print(accuary)
+print('accuary = ',accuary)
