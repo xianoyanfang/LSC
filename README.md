@@ -1,5 +1,5 @@
 # LSC
-LSC 最小二乘线性分类算法，在Python中是有机器学习包sklearn模块可以进行计算
+LSC 最小二乘线性分类算法，在Python中是有机器学习包sklearn模块可以进行计算,在这里自己手动实现一遍 （感觉自己萌萌哒o(≧v≦)o~） <br>
 ## 'get_MNIST.py'
 * get_MNIST.py 是用于获取数据，也在其中定义了关于算法所需要的函数:<br>
 * loadImageSet(filename) : 获取二进制文件 train-images-idx3-ubyte 和 t10k-images-idx3-ubyte 的图像数据矩阵<br>
